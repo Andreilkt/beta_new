@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="site-section">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="display-4 text-black mb-5"><strong>Бета-Сервис</strong></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="site-block-feature-2 d-flex rounded mb-5">
+                    <div class="mr-3">
+
+
+                        <img src={{ article.thumbnail.url }} alt={{ article.title }} width="200" height="200" class="rounded-square profile-photo" style = background-size: 100%, 100%, 100%, 100%;/>
+                    <svg class="icon">
+
+
+                    </div>
+
+                    <div class="text">
+                        <h3>{{ article.title }}</h3>
+
+
+
+                        <p>{{ article.full_description }}</p>
+                        <small>{{ article.time_create }}</small>
+                        <hr>
+                        <span>{{ article.category.title }}</span>
+                        <p class="mb-0 site-logo"><a href="/{{beta.id}}">На главную</a></p>
+                    </div>
+
+                </div>
+            </div>
+
+
+            {% endblock %}

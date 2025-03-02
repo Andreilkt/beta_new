@@ -1,0 +1,58 @@
+
+гит
+https://habr.com/ru/articles/755036/
+https://selectel.ru/blog/tutorials/git-remote-add-origin-or-how-to-work-with-remote-repositories/
+
+
+уроки django
+https://proghunter.ru/articles/creating-a-site-step-by-step-on-django-41#%D1%82%D0%B5%D0%BC%D0%B0-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F-blog-%D0%B8-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-article-%D0%B2-django-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B8
+
+сервер
+https://zomro.com/rus/blog/faq/473-installing-python-311-on-ubuntu-2204
+https://alexlinus.ru/blog/deploy-django-proekta-na-vps/
+
+source betaservis/venv/bin/activate
+https://dclimber.com/ru/posts/django-templates/ шаблоны бутстрап
+
+d6be487ca57969046b0444a1a7ca7a8f7160
+pa_autoconfigure_django.py https://github.com/Andreilkt/beta.git
+
+
+https://proproprogs.ru/django/zavershaem-razvertyvanie-django-sayta-na-hostinge django выкладка на сервер
+
+
+
+
+
+https://pythonru.com/uroki/7-osnovy-shablonizatora-jinja jinja
+
+https://pythonru.com/uroki/7-osnovy-shablonizatora-jinja тут же и фласк
+https://dvmn.org/encyclopedia/django-migrations/data-migrations/?ysclid=lbnduzl7ek823012516 про дата миграции
+https://metanit.com/python/django/3.2.php  про джанго без штатной админки
+
+https://eternalhost.net/blog/perevody/django-admin-panel#p2 джанго админка
+
+https://tutorial.djangogirls.org/ru/django_start_project/
+
+
+https://dvmn.org/encyclopedia/django-migrations/migration_null_constraint/?ysclid=lbnbkgrqp3408006359 тип ячейки по умолчанию
+
+
+Добавление поля в модель  которая создана ранее
+https://ru.stackoverflow.com/questions/758588/%D0%9A%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%B8%D1%82%D1%8C-%D0%BD%D0%BE%D0%B2%D0%BE%D0%B5-%D0%BF%D0%BE%D0%BB%D0%B5-%D0%B2-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C-django
+
+разворачивание
+https://developer.mozilla.org/ru/docs/Learn/Server-side/Django/Deployment
+
+
+аунтификация
+
+ https://proglib.io/p/django-s-nulya-chast-1-pishem-mnogopolzovatelskiy-blog-dlya-kluba-lyubiteley-zadach-python-2022-06-06
+
+Обратная связь
+https://proghunter.ru/articles/django-base-2023-adding-a-contact-form
+
+https://proghunter.ru/articles/django-base-2023-installing-postgresql-in-django
+
+
+https://alexlinus.ru/blog/deploy-django-proekta-na-vps/

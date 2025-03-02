@@ -1,0 +1,31 @@
+{% for article in articles %}
+
+<div class="col-md-6 col-lg-4">
+
+    <div class="site-block-feature-2 d-flex rounded mb-5">
+        <div class="mr-3">
+            <span><img src={{ article.thumbnail.url }} alt={{ article.title }} width="50" height="50"
+                       class="rounded-circle  profile-photo;" /></span>
+
+
+
+        </div>
+        <div class=" text">
+            <h3>{{ article.title }}</h3>
+
+
+            <p>{{ article.short_description }}<br/>
+            <a href="{{ article.get_absolute_url }}">подробнее</a><br/>
+            <a href="/{{beta.id}}" class="mb-0 site-logo">На главную</a></p>
+        </div>
+    </div>
+</div>
+
+{% endfor %}
+
+
+
+
+
+
+

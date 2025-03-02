@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class="site-section">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="display-4 text-black mb-5">Наши <strong>Услуги</strong></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="site-block-feature-2 d-flex rounded mb-5">
+                    <div class="mr-3">
+                        <span class="icon flaticon-agreement font-weight-light "></span>
+                    </div>
+                    {% for betaservistext in services_text %}
+                    <div class="text">
+                        <h3>Сервисные услуги</h3>
+                        <p>{{ betaservistext.services_text }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+
+
+{% endblock %}
