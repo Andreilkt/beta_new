@@ -5,8 +5,115 @@ After=network.target
 [Service]
 User=fly
 Group=www-data
-WorkingDirectory=/home/fly/beta_new/
+WorkingDirectory=/home/fly/beta_new
 ExecStart=/home/fly/beta_new/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/fly/beta_new/server.sock betaServis.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
+
+sudo systemctl enable beta_new.gunicorn
+
+sudo systemctl start beta_new.gunicorn
+
+etc/nginx/sites-available/betaServis
+
+sudo systemctl status beta_new.gunicorn
+
+ssh -p 49435 root@9f7d77a6c7bc.vps.myjino.ru
+
+ssh -p 49435 root@9f7d77a6c7bc.vps.myjino.ru
+
+nano /etc/systemd/system/beta_new.gunicorn.service
+
+
+git branch --set-upstream-to=git@github.com:Andreilkt/beta_new.git master
+
+git@github.com:Andreilkt/beta_new.git
+
+git remote add origin git@github.com:Andreilkt/beta_new.git
+
+git remote show git@github.com:Andreilkt/beta_new.git
+
+source myenv/bin/activate
+
+gunicorn --bind 0.0.0.0:8000 betaServis.wsgi
+
+python manage.py runserver beta-servis.ru:8000
+gunicorn beta_new.wsgi:application- -bind 0.0.0.0:8000
+
+
+sudo nano /etc/nginx/sites-available/beta_new
+
+[Unit]
+Description=gunicorn daemon
+Requires=gunicorn.socket
+After=network.target
+[Service]
+User=fly
+Group=www-data
+WorkingDirectory=/home/user/myprojectdir
+ExecStart=/home/fly/beta_new/myenv/bin/gunicorn \
+          --access-logfile - \
+          --workers 3 \
+          --bind unix:/run/gunicorn.sock \
+          betaServis.wsgi:application
+[Install]
+WantedBy=multi-user.target
+
+
+server {
+    listen 80;
+    server_name server_domain_or_IP;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/fly/beta_new;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+
+sudo usermod -a -G ${USER} www-data
+
+рабочая настройка
+https://timeweb.cloud/tutorials/django/kak-ustanovit-django-nginx-i-gunicorn-na-virtualnyj-server
+
+makeclode
+
+ssh ubuntu_fly@45.67.32.32
+
+ввести пароль
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y software-properties-common
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install -y python3.11
+python3.11 --version
+sudo apt install -y python3.11-distutils
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.11 get-pip.py
+sudo apt install -y python3.11-venv
+sudo apt install git
+git init
+git status
+
+git remote add origin  git@github.com:Andreilkt/beta_new.git
+git clone git@github.com:Andreilkt/beta_new.git
+python3.11 -m venv myenv
+source myenv/bin/activate
+
+
+
+
+после клонирования
+
+pip install -r requirements.txt
+
+deactivate
+
+
+
