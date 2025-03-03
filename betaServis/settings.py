@@ -133,8 +133,9 @@ STATIC_ROOT = "/var/www/beta_new/static/"
 # ]
 
 #STATICFILES_DIRS = [BASE_DIR / 'templates']
-MEDIA_ROOT = (BASE_DIR / 'media')
+#MEDIA_ROOT = (BASE_DIR / 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = "/var/www/beta-new/media/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
