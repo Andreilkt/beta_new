@@ -20,9 +20,11 @@ pa_autoconfigure_django.py https://github.com/Andreilkt/beta.git
 
 https://proproprogs.ru/django/zavershaem-razvertyvanie-django-sayta-na-hostinge django выкладка на сервер
 
+удаление nginx
+https://ru.stackoverflow.com/questions/534286/%D0%BA%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-nginx-%D0%B2-ubuntu
 
-
-
+установка nginx
+https://timeweb.cloud/tutorials/ubuntu/kak-ustanovit-nginx-na-ubuntu
 
 https://pythonru.com/uroki/7-osnovy-shablonizatora-jinja jinja
 
