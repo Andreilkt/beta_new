@@ -51,8 +51,8 @@ After=network.target
 [Service]
 User=fly
 Group=www-data
-WorkingDirectory=/home/user/myprojectdir
-ExecStart=/home/fly/beta_new/myenv/bin/gunicorn \
+WorkingDirectory=/home/user/beta_new
+ExecStart=/home/ubuntu_fly/beta_new/myenv/bin/gunicorn \
           --access-logfile - \
           --workers 3 \
           --bind unix:/run/gunicorn.sock \
@@ -67,7 +67,7 @@ server {
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
-        root /home/fly/beta_new;
+        root /home/ubuntu_flyfly/beta_new;
     }
 
     location / {
@@ -116,4 +116,27 @@ pip install -r requirements.txt
 deactivate
 
 
+ rm -Rfv beta_new
+ http://45.67.32.32:8000
+ pip install  gunicorn
 
+sudo nano /etc/nginx/sites-available/beta_new
+
+server {
+    listen 80;
+    fly_server 45.67.32.32;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/ubuntu_fly/beta_new/static;
+    }
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/run/gunicorn.sock;
+    }
+}
+sudo ln -s /etc/nginx/sites-available/beta_new /etc/nginx/sites-enabled
+
+sudo nginx -t
+sudo systemctl restart nginx
