@@ -124,11 +124,19 @@ sudo nano /etc/nginx/sites-available/beta_new
 
 server {
     listen 80;
-    fly_server 45.67.32.32;
+    server_name 45.67.32.32;
 
     location = /favicon.ico { access_log off; log_not_found off; }
     location /static/ {
-        root /home/ubuntu_fly/beta_new/static;
+        root /home/ubuntu_fly/beta_new/modules/beta/;
+    }
+
+    location /media/ {
+        root /home/ubuntu_fly/beta_new/;
+    }
+
+    location /admin/static/ {
+    root /home/ubuntu_fly/beta_new/;
     }
 
     location / {
@@ -136,7 +144,11 @@ server {
         proxy_pass http://unix:/run/gunicorn.sock;
     }
 }
+
 sudo ln -s /etc/nginx/sites-available/beta_new /etc/nginx/sites-enabled
 
 sudo nginx -t
 sudo systemctl restart nginx
+
+
+
