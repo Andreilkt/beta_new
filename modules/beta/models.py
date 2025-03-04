@@ -53,10 +53,8 @@ class Article(models.Model):
     """
     Модель постов для сайта
     """
-    title = models.CharField(verbose_name='Заголовок', max_length=255)
-    slug = models.CharField(verbose_name='Альт.название', max_length=255, blank=True, unique=True)
+    #slug = models.CharField(verbose_name='Альт.название', max_length=255, blank=True, unique=True)
     # Другие поля модели...
-    category = TreeForeignKey('Category', on_delete=models.PROTECT, related_name='articles', verbose_name='Категория')
 
     STATUS_OPTIONS = (
 
@@ -80,6 +78,7 @@ class Article(models.Model):
     status = models.CharField(choices=STATUS_OPTIONS, default='published', verbose_name='Статус поста', max_length=10)
     time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время обновления')
+    category = TreeForeignKey('Category', on_delete=models.PROTECT, related_name='articles', verbose_name='Категория')
     author = models.ForeignKey(to=User, verbose_name='Автор', on_delete=models.SET_DEFAULT, related_name='author_posts',
                                default=1)
 
