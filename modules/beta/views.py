@@ -26,7 +26,6 @@ class ArticleDetailViewMain(DetailView):
         return context
 
 
-
 class ArticleDetailView(DetailView):
     model = Article
     template_name = 'industrie/site.html'
@@ -36,16 +35,6 @@ class ArticleDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['title'] = self.object.title
         return context
-
-
-
-
-
-
-
-
-
-
 
 
 class ArticleByCategoryListView(ListView):
