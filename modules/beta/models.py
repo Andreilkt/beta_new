@@ -44,17 +44,17 @@ class Category(MPTTModel):
 
     def __str__(self):
         """
-        Возвращение заголовка статьи
+        Возвращение заголовка материала
         """
         return self.title
 
 
 class Article(models.Model):
     """
-    Модель постов для сайта
+    Модель матералов  для сайта с установкой категории
     """
     #slug = models.CharField(verbose_name='Альт.название', max_length=255, blank=True, unique=True)
-    # Другие поля модели...
+
 
     STATUS_OPTIONS = (
 
@@ -75,7 +75,7 @@ class Article(models.Model):
         validators=[FileExtensionValidator(allowed_extensions=('png', 'jpg', 'webp', 'jpeg', 'gif'))]
     )
 
-    status = models.CharField(choices=STATUS_OPTIONS, default='published', verbose_name='Статус поста', max_length=10)
+    status = models.CharField(choices=STATUS_OPTIONS, default='published', verbose_name='Статус материала', max_length=10)
     time_create = models.DateTimeField(auto_now_add=True, verbose_name='Время добавления')
     time_update = models.DateTimeField(auto_now=True, verbose_name='Время обновления')
     category = TreeForeignKey('Category', on_delete=models.PROTECT, related_name='articles', verbose_name='Категория')
@@ -91,14 +91,14 @@ class Article(models.Model):
         db_table = 'app_articles'
         ordering = ['-fixed', '-time_create']
         indexes = [models.Index(fields=['-fixed', '-time_create', 'status'])]
-        verbose_name = 'Статья'
-        verbose_name_plural = 'Статьи'
+        verbose_name = 'Материал'
+        verbose_name_plural = 'Материалы'
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('articles_detail', kwargs={'slug': self.slug})
+        return reverse('articles_detail_main',  kwargs={'slug': self.slug})
 
     def save(self, *args, **kwargs):
         """

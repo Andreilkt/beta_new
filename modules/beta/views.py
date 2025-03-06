@@ -50,7 +50,7 @@ class ArticleDetailView(DetailView):
 
 class ArticleByCategoryListView(ListView):
     model = Article
-    template_name = 'main.html'
+    template_name = 'industrie/index.html'
     context_object_name = 'articles'
     category = None
 

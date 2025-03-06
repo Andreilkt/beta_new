@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<!--site-->
 
 <div class="site-section">
     <div class="container">
@@ -9,14 +10,14 @@
                 <h2 class="display-4 text-black mb-5"><strong>Бета-Сервис</strong></h2>
             </div>
         </div>
-        <div class="row" style="border-style:solid; border-color:transparent;>
-            <div class="col-md-6 col-lg-4>
+        <div class="row" style="border-style:solid; border-color:transparent;">
+            <div class='col-md-6 col-lg-4'>
                 <div class="site-block-feature-2 d-flex rounded mb-5">
                     <div class="mr-3">
 
 
                         <img src={{ article.thumbnail.url }} alt={{ article.title }} width="200" height="200"
-                             class="rounded-square profile-photo" style=background-size: 100%, 100%, 100%, 100%;/>
+                             class="rounded-square profile-photo" style="background-size: 100%, 100%, 100%, 100%;"/>
 
 
                             <h3>{{ article.title }}</h3>
@@ -36,5 +37,5 @@
                 </div>
             </div>
 
-
+ <!--site_end-->
             {% endblock %}
