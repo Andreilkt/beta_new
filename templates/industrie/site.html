@@ -10,32 +10,43 @@
                 <h2 class="display-4 text-black mb-5"><strong>Бета-Сервис</strong></h2>
             </div>
         </div>
-        <div class="row" style="border-style:solid; border-color:transparent;">
-            <div class='col-md-6 col-lg-4'>
-                <div class="site-block-feature-2 d-flex rounded mb-5">
-                    <div class="mr-3">
+        <div class="row" style="display: inline-block;">
 
-
-
-                    </div>
-
-                    <div class="text">
-
-                        <img src={{ article.thumbnail.url }} alt={{ article.title }} width="200" height="200"
+            <div style="float:left; margin-right: 2%">
+                 <img src={{ article.thumbnail.url }} alt={{ article.title }} width="200" height="200"
                              class="rounded-square profile-photo" style="background-size: 100%, 100%, 100%, 100%;"/>
-
-
+            </div>
+            <div    style=" width: fit-content; ">
                         <h3>{{ article.title }}</h3>
                         <p>{{ article.full_description }}</p>
-                        <small>{{ article.time_create }}</small>
+                        <!--                        <small>{{ article.time_create }}</small>-->
+                        <span><a href="/{{beta.id}}">На главную</a></span>
                         <hr>
-                        <span>{{ article.category.title }}</span>
-                        <p class="mb-0 site-logo"><a href="/{{beta.id}}">На главную</a></p>
 
-                    </div>
+                        <!--                                    <span>{{ article.category.title }}</span>-->
+                        <p class="mb-0 site-logo"></p>
+
+
+            </div>
+
+<!--                <div class="site-block-feature-2 d-flex rounded mb-5" style="border-style:solid; border-color:green;">-->
+<!--                    <div class="mr-3" style="border-style:solid; border-color:red;">-->
+
+
+<!--                    </div>-->
+
+<!--                        <div class="text" style="border-style:solid; border-color:blue;">-->
+
+
+
+
+
+
+
+<!--                    </div>-->
 
                 </div>
-            </div>
+    </div>
 
             <!--site_end-->
             {% endblock %}
