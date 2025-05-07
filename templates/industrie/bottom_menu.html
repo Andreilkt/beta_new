@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!--site-->
+
+<div class="site-section">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-6 text-center">
+                <h2 class="display-4 text-black mb-5"><strong>Бета-Сервис</strong></h2>
+            </div>
+        </div>
+        <div class="row" style="display: inline-block;">
+
+
+            <div style="float:left; margin-right: 2%">
+
+                <img src={{ course.thumbnail_bottom.url }} alt={{ course.title }} width="200" height="200"
+                     class="rounded-square profile-photo" style="background-size: 100%, 100%, 100%, 100%;"/>
+            </div>
+            <div style=" width: fit-content; ">
+                <h3>{{ course.title }}</h3>
+                <p>{{ course.descp }}</p>
+                <p>{{ course.descp_full }}</p>
+
+                <span><a href="/{{beta.id}}" style="text-decoration: none;">На главную</a></span>
+                <hr>
+
+
+                <p class="mb-0 site-logo"></p>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!--site_end-->
+    {% endblock %}
